@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(125, 211, 252, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(110, 231, 183, 0.06), transparent 40%),
+    #0a0a0f;
+}
+
+::selection { background: rgba(125, 211, 252, 0.25); }
+
+.markdown h1 { @apply text-2xl font-semibold mt-4 mb-2; }
+.markdown h2 { @apply text-xl font-semibold mt-4 mb-2 text-accent2; }
+.markdown h3 { @apply text-lg font-semibold mt-3 mb-1.5 text-accent; }
+.markdown p { @apply leading-relaxed my-2; }
+.markdown ul { @apply list-disc pl-5 my-2 space-y-1; }
+.markdown ol { @apply list-decimal pl-5 my-2 space-y-1; }
+.markdown strong { @apply text-zinc-50; }
+.markdown code { @apply bg-panel2 px-1.5 py-0.5 rounded text-sm text-accent; }
+.markdown a { @apply text-accent2 underline decoration-dotted; }
+.markdown blockquote { @apply border-l-2 border-border pl-3 italic text-zinc-400 my-2; }
